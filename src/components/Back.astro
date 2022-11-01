@@ -1,0 +1,28 @@
+---
+const onClick = () => {
+  console.log('clicked');
+  window.history.back();
+}
+---
+<div>
+  <button onclick="() => console.log('clicked')">Back</button>
+</div>
+
+<style>
+  div {
+    display:flex;
+    justify-content: center;
+  }
+
+  button {
+    background-color: var(--theme-bg);
+    color: var(--theme-text);
+    padding: .8em 1.5em;
+    border-radius: 1em;
+    border:1px solid var(--theme-text-lighter)
+  }
+
+  button:hover {
+    background-color: var(--theme-bg-hover);
+  }
+</style>

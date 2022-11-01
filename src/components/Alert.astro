@@ -1,0 +1,18 @@
+---
+const { level } = Astro.props
+
+---
+
+<aside>
+  <slot />
+</aside>
+
+<style>
+  aside {
+    background-color: var(--theme-divider);
+    padding: 1em 1.5em;
+    width: 100%;
+    font-size: 1.3em; 
+  }
+  
+</style>

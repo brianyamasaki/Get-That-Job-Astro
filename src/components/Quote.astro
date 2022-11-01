@@ -1,0 +1,25 @@
+---
+const { author, title } = Astro.props
+
+
+---
+
+<aside>
+  <slot />
+  <div>
+    <p><strong>{author || ''}</strong></p>
+    <p>{title || ''}</p>
+  </div>
+</aside>
+
+<style>
+  aside {
+    background-color: var(--theme-selection-bg);
+    padding: 1em 1.5em;
+    width: 100%;
+    font-size: 1.3em; 
+  }
+  div {
+    text-align: right;
+  }
+</style>

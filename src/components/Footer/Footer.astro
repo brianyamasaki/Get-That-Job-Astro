@@ -1,0 +1,19 @@
+---
+type Props = {
+	path: string;
+};
+const { path } = Astro.props as Props;
+---
+
+<footer>
+	<div>&copy;Copyright 2022 - Brian Yamasaki</div>
+</footer>
+
+<style>
+	footer {
+		margin-top: auto;
+		padding: 2rem;
+		border-top: 3px solid var(--theme-divider);
+		text-align: center;
+	}
+</style>
