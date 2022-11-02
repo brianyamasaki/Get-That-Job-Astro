@@ -1,0 +1,47 @@
+---
+import HeadCommon from '../components/HeadCommon.astro';
+import HeadSEO from '../components/HeadSEO.astro';
+import Header from '../components/Header/Header.astro';
+import * as CONFIG from '../config';
+import type { MarkdownHeading } from 'astro';
+import Footer from '../components/Footer/Footer.astro';
+
+type Props = {
+	frontmatter: CONFIG.Frontmatter;
+	headings: MarkdownHeading[];
+};
+
+const { frontmatter, headings } = Astro.props as Props;
+const canonicalURL = new URL(Astro.url.pathname, Astro.site);
+const currentPage = Astro.url.pathname;
+const currentFile = `src/pages${currentPage.replace(/\/$/, '')}.md`;
+const githubEditUrl = `${CONFIG.GITHUB_EDIT_URL}/${currentFile}`;
+---
+<html dir={frontmatter.dir ?? 'ltr'} lang={frontmatter.lang ?? 'en-us'} class="initial">
+	<head>
+		<HeadCommon />
+		<HeadSEO frontmatter={frontmatter} canonicalUrl={canonicalURL} />
+		<title>
+			{frontmatter.title ? `${frontmatter.title} 🚀 ${CONFIG.SITE.title}` : CONFIG.SITE.title}
+		</title>
+    <style>
+      .layout {
+        margin: 0 4em;
+        padding-bottom: 1em;
+      }
+      @media (max-width: 800px) {
+        .layout {
+          margin: 0 1.5em;
+        }
+      }
+    </style>
+  </head>
+
+	<body>
+		<Header currentPage={currentPage} />
+		<main class="layout">
+      <slot />
+		</main>
+		<Footer path={currentFile} />
+	</body>
+</html>
