@@ -1,0 +1,17 @@
+div.backButton {
+  display:flex;
+  justify-content: center;
+  margin: 1em;
+}
+
+.backButton button {
+  background-color: var(--theme-bg);
+  color: var(--theme-text);
+  padding: .8em 1.5em;
+  border-radius: 1em;
+  border:1px solid var(--theme-text-lighter)
+}
+
+.backButton button:hover {
+  background-color: var(--theme-bg-hover);
+}

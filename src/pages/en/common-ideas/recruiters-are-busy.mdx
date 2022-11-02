@@ -4,6 +4,7 @@ description: Recruiters are busy people so make your resume fast to skim and wit
 layout: ../../../layouts/MainLayout.astro
 ---
 import Alert from '../../../components/Alert.astro'
+import BackButton from '../../../components/BackButton/BackButton'
 
 Recruiters get hundreds (if not thousands) of items crossing their desks every week. They don't have time to read everything in detail but instead skim items and make quick decisions whether to keep reading or throw it away. 
 
@@ -34,6 +35,4 @@ The HR representative reading your resume gets judged on the following criteria:
 
 Think about what you say and what your writings help meet these criteria. 
 
-::: tip
-Press the back button on your browser to return to the previous page
-:::
+<BackButton client:idle />
