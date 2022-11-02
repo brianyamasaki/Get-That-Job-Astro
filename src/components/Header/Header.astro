@@ -4,7 +4,8 @@ import * as CONFIG from '../../config';
 import SkipToContent from './SkipToContent.astro';
 import SidebarToggle from './SidebarToggle';
 import LanguageSelect from './LanguageSelect';
-import Search from './Search';
+import TopNav from './TopNav.astro';
+// import Search from './Search';
 
 type Props = {
 	currentPage: string;
@@ -27,9 +28,7 @@ const lang = getLanguageFromURL(currentPage);
 		</div>
 		<div style="flex-grow: 1;"></div>
 		{KNOWN_LANGUAGE_CODES.length > 1 && <LanguageSelect lang={lang} client:idle />}
-		<div class="search-item">
-			<Search client:idle />
-		</div>
+		<TopNav />
 	</nav>
 </header>
 

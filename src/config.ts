@@ -1,6 +1,6 @@
 export const SITE = {
-	title: 'Get-That-Job',
-	description: 'Your website description.',
+	title: 'Get That Job',
+	description: 'Preparation to best get the job you want',
 	defaultLanguage: 'en_US',
 };
 
