@@ -15,7 +15,6 @@ const { frontmatter, headings } = Astro.props as Props;
 const canonicalURL = new URL(Astro.url.pathname, Astro.site);
 const currentPage = Astro.url.pathname;
 const currentFile = `src/pages${currentPage.replace(/\/$/, '')}.md`;
-const githubEditUrl = `${CONFIG.GITHUB_EDIT_URL}/${currentFile}`;
 ---
 <html dir={frontmatter.dir ?? 'ltr'} lang={frontmatter.lang ?? 'en-us'} class="initial">
 	<head>
@@ -28,7 +27,21 @@ const githubEditUrl = `${CONFIG.GITHUB_EDIT_URL}/${currentFile}`;
       .layout {
         margin: 0 4em;
         padding-bottom: 1em;
+				display:flex;
+				justify-content: center;
       }
+
+			.hero {
+				max-width: 82em;
+				margin: 0  auto;
+				padding: 0 1em;
+				margin-bottom: 1em;
+			}
+
+			.content {
+				max-width:70em;
+			}
+
       @media (max-width: 800px) {
         .layout {
           margin: 0 1.5em;
@@ -39,8 +52,11 @@ const githubEditUrl = `${CONFIG.GITHUB_EDIT_URL}/${currentFile}`;
 
 	<body>
 		<Header currentPage={currentPage} />
+		{frontmatter.image ? <div class="hero"><img src={frontmatter.image.src} alt={frontmatter.image.alt} /></div> : ''}
 		<main class="layout">
-      <slot />
+			<div class="content">
+				<slot />
+			</div>
 		</main>
 		<Footer path={currentFile} />
 	</body>

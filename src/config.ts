@@ -23,6 +23,7 @@ export type Frontmatter = {
 	dir?: 'ltr' | 'rtl';
 	ogLocale?: string;
 	lang?: string;
+	section?: string;
 };
 
 export const KNOWN_LANGUAGES = {
@@ -47,31 +48,25 @@ export type Sidebar = Record<
 >;
 export const SIDEBAR: Sidebar = {
 	en: {
-		'Prepare to Job Hunt': [
-			{ text: 'Introduction', link: 'en/prepare-in-advance' },
+		'Hiring Process': [
+			{ text: 'The Hiring Process', link: 'en/hiring-process'}
+		],
+		'Preparation': [
+			{ text: 'Prepare to Job Hunt', link: 'en/prepare-in-advance' },
 			{ text: 'Keep Track of Stuff', link: 'en/prepare-in-advance/keep-track' },
 			{ text: 'Networking', link: 'en/prepare-in-advance/networking' },
 		],
-		'Cover Letters': [
-			{ text: 'Introduction', link: 'en/cover-letter' },
-			{ text: 'Letter Structure', link: 'en/cover-letter/letter-structure' },
-			{ text: 'Speed Dating', link: 'en/cover-letter/speed-dating' },
-			{ text: 'Elevator Pitches', link: 'en/cover-letter/elevator-pitches'}
-		],
-		'How Companies Hire': [
-			{ text: 'The Hiring Process', link: 'en/hiring-process'}
-		],
-		'Making a Resume': [
-			{ text: 'What is a Resume', link: 'en/resume'},
+		'Resumes': [
+			{ text: 'What is a Resume?', link: 'en/resume'},
 			{ text: 'Master Resumes', link: 'en/resume/master-resume'},
 			{ text: 'Resume Ingredients', link: 'en/resume/what-goes-in'},
-			{ text: 'Information Ordering', link: 'en/resume/section-ordering'},
+			{ text: 'Section Ordering', link: 'en/resume/section-ordering'},
 			{ text: 'Be Skimmable', link: 'en/resume/easy-to-read'},
 			{ text: 'Descriptions', link: 'en/resume/describe-your-experiences'},
 			{ text: 'Find Job Requirements', link: 'en/resume/job-requirements'},
 			{ text: 'Meet Job Requirements', link: 'en/resume/meet-job-requirements'}
 		],
-		'Making a Cover Letter': [
+		'Cover Letters': [
 			{ text: 'Your Cover Letter', link: 'en/cover-letter'},
 			{ text: 'Structure', link: 'en/cover-letter/letter-structure'},
 			{ text: 'Speed Dating', link: 'en/cover-letter/speed-dating'},
