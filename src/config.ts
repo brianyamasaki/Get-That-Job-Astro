@@ -70,7 +70,7 @@ export const SIDEBAR: Sidebar = {
 			{ text: 'Your Cover Letter', link: 'en/cover-letter'},
 			{ text: 'Structure', link: 'en/cover-letter/letter-structure'},
 			{ text: 'Speed Dating', link: 'en/cover-letter/speed-dating'},
-			{ text: 'Elevator Pitches', link: 'en/elevator-pitches'},
+			{ text: 'Elevator Pitches', link: 'en/cover-letter/elevator-pitches'},
 		],
 		'Interviews': [
 			{ text: 'Your Interview', link: 'en/interviews'},
