@@ -79,6 +79,9 @@ export const SIDEBAR: Sidebar = {
 			{ text: 'Elevator Pitches', link: 'en/interviews/elevator-pitches'},
 			{ text: 'Speed Dating', link: 'en/interviews/speed-dating'},
 		],
+		'First Day': [
+			{ text: 'What to Bring', link: 'en/first-day/index'}
+		],
 		'About':[{text: 'About this website', link: 'en/about'}]
 	},
 };

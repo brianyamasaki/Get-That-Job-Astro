@@ -1,12 +1,15 @@
 ---
 import { getLanguageFromURL } from '../../languages';
 import { SIDEBAR } from '../../config';
+import type { NavListProps } from './NavList';
+import NavList from './NavList'
 
 type Props = {
 	currentPage: string;
+	section?: string;
 };
 
-const { currentPage } = Astro.props as Props;
+const { currentPage, section } = Astro.props as Props;
 const currentPageMatch = currentPage.endsWith('/')
 	? currentPage.slice(1, -1)
 	: currentPage.slice(1);
@@ -16,25 +19,20 @@ const sidebar = SIDEBAR[langCode];
 
 <nav aria-labelledby="grid-left">
 	<ul class="nav-groups">
-		{Object.entries(sidebar).map(([header, children]) => (
-			<li>
-				<div class="nav-group">
-					<h2>{header}</h2>
-					<ul>
-						{children.map((child) => {
-							const url = Astro.site?.pathname + child.link;
-							return (
-								<li class="nav-link">
-									<a href={url} aria-current={currentPageMatch === child.link ? 'page' : false}>
-										{child.text}
-									</a>
-								</li>
-							);
-						})}
-					</ul>
-				</div>
-			</li>
-		))
+		{Object.entries(sidebar).map(([header, children]) => {
+			const nlp = {
+				heading: header,
+				links: children,
+				sitePathname: Astro.site?.pathname || '',
+				currentPageMatch,
+				pageSection: section || '',
+			};
+			return (
+				<li>
+					<NavList client:idle nlp={nlp} />
+				</li>
+			)}
+			)
 		}
 	</ul>
 </nav>
@@ -80,27 +78,6 @@ const sidebar = SIDEBAR[langCode];
 		padding: 0.1rem 1rem;
 		text-transform: uppercase;
 		margin-bottom: 0.5rem;
-	}
-
-	.nav-link a {
-		font-size: 1rem;
-		margin: 1px;
-		padding: 0.1rem 1rem;
-		font: inherit;
-		color: inherit;
-		text-decoration: none;
-		display: block;
-	}
-
-	.nav-link a:hover,
-	.nav-link a:focus {
-		background-color: var(--theme-bg-hover);
-	}
-
-	.nav-link a[aria-current='page'] {
-		color: var(--theme-text-accent);
-		background-color: var(--theme-bg-accent);
-		font-weight: 600;
 	}
 
 	@media (min-width: 50em) {
