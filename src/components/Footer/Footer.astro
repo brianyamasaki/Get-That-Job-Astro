@@ -1,4 +1,5 @@
 ---
+import ThemeToggleButton from '../RightSidebar/ThemeToggleButton';
 type Props = {
 	path: string;
 };
@@ -6,6 +7,7 @@ const { path } = Astro.props as Props;
 ---
 
 <footer>
+	<ThemeToggleButton client:visible />
 	<div>&copy;&nbsp;Copyright 2022 - Brian Yamasaki</div>
 </footer>
 
