@@ -1,0 +1,9 @@
+.next-page-link {
+  display: flex;
+  justify-content: right;
+}
+
+.next-page-link a {
+  font-weight: 700;
+
+}

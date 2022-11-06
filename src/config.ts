@@ -80,7 +80,7 @@ export const SIDEBAR: Sidebar = {
 			{ text: 'Speed Dating', link: 'en/interviews/speed-dating'},
 		],
 		'First Day': [
-			{ text: 'What to Bring', link: 'en/first-day/index'}
+			{ text: 'What to Bring', link: 'en/first-day'}
 		],
 		'About':[{text: 'About this website', link: 'en/about'}]
 	},

@@ -49,9 +49,11 @@
 }
 
 .nav-group.expanded ul {
-  display:block;
+  height:auto;
+  overflow: hidden;
 }
 .nav-group.hidden ul {
-  display:none;
+  height: 0;
+  overflow: hidden;
 }
 

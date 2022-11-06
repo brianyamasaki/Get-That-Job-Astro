@@ -2,7 +2,8 @@
 import { getLanguageFromURL } from '../../languages';
 import { SIDEBAR } from '../../config';
 import type { NavListProps } from './NavList';
-import NavList from './NavList'
+import NavList from './NavList';
+import { currentPageFixed } from '../../utils';
 
 type Props = {
 	currentPage: string;
@@ -10,9 +11,8 @@ type Props = {
 };
 
 const { currentPage, section } = Astro.props as Props;
-const currentPageMatch = currentPage.endsWith('/')
-	? currentPage.slice(1, -1)
-	: currentPage.slice(1);
+
+const currentPageMatch = currentPageFixed(currentPage);
 const langCode = getLanguageFromURL(currentPage);
 const sidebar = SIDEBAR[langCode];
 ---

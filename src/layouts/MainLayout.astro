@@ -8,6 +8,8 @@ import RightSidebar from '../components/RightSidebar/RightSidebar.astro';
 import * as CONFIG from '../config';
 import type { MarkdownHeading } from 'astro';
 import Footer from '../components/Footer/Footer.astro';
+import NextPage from '../components/NextPage/NextPage';
+import { currentPageFixed } from '../utils';
 
 type Props = {
 	frontmatter: CONFIG.Frontmatter;
@@ -128,6 +130,7 @@ const githubEditUrl = `${CONFIG.GITHUB_EDIT_URL}/${currentFile}`;
 			<div id="grid-main">
 				<PageContent frontmatter={frontmatter} headings={headings} githubEditUrl={githubEditUrl}>
 					<slot />
+					<NextPage currentPageMatch={currentPageFixed(currentPage)} client:idle />
 				</PageContent>
 			</div>
 			<aside id="grid-right" class="grid-sidebar" title="Table of Contents">
