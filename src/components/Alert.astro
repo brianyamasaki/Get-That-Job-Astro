@@ -1,13 +1,17 @@
 ---
-const { level } = Astro.props
-
+const { alertHeader } = Astro.props
 ---
 
 <aside>
+  {alertHeader ? <h5>{alertHeader}</h5> : ''}
   <slot />
 </aside>
 
 <style>
+  h5 {
+    font-style: italic;
+    font-size: 1.3em;
+  }
   aside {
     background-color: var(--theme-divider);
     padding: 1em 1.5em;
