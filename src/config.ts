@@ -82,6 +82,15 @@ export const SIDEBAR: Sidebar = {
 		'First Day': [
 			{ text: 'What to Bring', link: 'en/first-day'}
 		],
+		'Common Ideas': [
+			{ text: 'Being Uncomfortable', link: 'en/common-ideas/being-uncomfortable'},
+			{ text: 'Elevator Pitches', link: 'en/common-ideas/elevator-pitches'},
+			{ text: 'Get Organized', link: 'en/common-ideas/get-organized'},
+			{ text: 'Networking', link: 'en/common-ideas/networking'},
+			{ text: 'Portolios', link: 'en/common-ideas/portfolios'},
+			{ text: 'Recruiters are Busy', link: 'en/common-ideas/recruiters-are-busy'},
+			{ text: 'Speed Dating', link: 'en/common-ideas/speed-dating'}
+		],
 		'About':[{text: 'About this website', link: 'en/about'}]
 	},
 };
