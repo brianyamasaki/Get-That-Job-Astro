@@ -7,15 +7,18 @@ const { path } = Astro.props as Props;
 ---
 
 <footer>
-	<ThemeToggleButton client:visible />
 	<div>&copy;&nbsp;Copyright 2022 - Brian Yamasaki</div>
-</footer>
+	<ThemeToggleButton client:visible />
+ </footer>
 
 <style>
 	footer {
 		margin-top: auto;
-		padding: 2rem;
+		padding: 1rem;
 		border-top: 3px solid var(--theme-divider);
 		text-align: center;
+	}
+	div {
+		margin:1rem;  
 	}
 </style>
