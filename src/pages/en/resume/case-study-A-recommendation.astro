@@ -1,0 +1,140 @@
+---
+import MainLayout from '../../../layouts/MainLayout.astro';
+import ReactTooltip from 'react-tooltip';
+import React from 'react';
+const frontmatter = {
+	title: 'Case Study A, recommendation',
+	description: 'An edited resume according to our techniques',
+	layout: '',
+  section: 'Resumes'
+};
+const disc = "<span>&nbsp;&#9679;&nbsp;</span>";
+
+const headings = [
+  {
+    depth: 3,
+    slug:'education',
+    text: 'Education'
+  },
+  {
+    depth: 3,
+    slug:'experience',
+    text: 'Experience'
+  },
+  {
+    depth: 3,
+    slug:'achievements',
+    text: 'Achievements'
+  },
+]
+const smallTopMargin = {marginTop: '1em', marginBottom: '.5em'}
+---
+<MainLayout frontmatter={frontmatter} headings={headings}>
+  <p>
+  Instead of showing a picture of a piece of paper, this is rendered in HTML, meaning 
+  that the text can wrap at odd places, depending on how wide your browser is opened. 
+  </p>
+  <p>
+    Mouse over or tap on the highlighted text to see extra detail on formatting choices on this resume.
+  </p>
+  <div class="paper">
+    <h2>Aeon Lynx</h2>
+    <div class="subhead">
+      aeon.lynx@university.edu
+      &nbsp;&#9679;&nbsp;
+      (425)555-1212
+      &nbsp;&#9679;&nbsp;
+      <span class="tooltip" data-tip='Open a free LinkedIn account and keep your Complete Resume up there'>LinkedIn: in/aeonlynx/</span>
+    </div>
+    <h3 style={smallTopMargin}><span class="tooltip" data-tip="Centered section headers allow for ultra fast skimming to find correct section">Education</span></h3>
+    <h4 style={smallTopMargin}>Transylvania State University, <small>City, State</small></h4>
+    <ul>
+      <li>Expected graduation in Spring 2023</li>
+      <li>Extensive experience with CAD and Design software</li>
+      <li>CSWA Mechanical Design Certified</li>
+    </ul>
+    <h3 style={smallTopMargin}>Experience</h3>
+    <h4 style={smallTopMargin}>Hurricane Painting, <small>On-site manager and commercial painter</small></h4>
+    <ul>
+      <li>Worked with clients on job sites on a daily basis, regarding complaints, billing and sales</li>
+      <li>Managed time and resource allocation at multiple jobs at any given time</li>
+    </ul>
+    <h4 style={smallTopMargin}>Catmull Metal Products, <small>Summer Intern</small></h4>
+    <ul>
+      <li>Experienced at MIG (Metal Inert Gas) Welding </li>
+      <li>Experienced with CNC machining with manual editing of G-Code programs</li>
+      <li>Worked at multiple roles in shop manufacturing processing</li>
+    </ul>
+    <h3 style={smallTopMargin}><span class="tooltip" data-tip='Use multiple columns if you have problems fitting into a single page. If you are using a phone to view this, this section will display in a single column'>Achievements</span></h3>
+    <div class="flexy">
+      <div class="flex-item">
+        <h4 style={smallTopMargin}>Home Renovation</h4>
+        <ul>
+          <li>Experience in home renovation, from demolition to building cabinetry, moving walls, replacing major beams and roof trusses</li>
+        </ul>
+      </div>
+       <div class="flex-item">
+        <h4 style={smallTopMargin}>Model United Nations</h4>
+        <ul>
+          <li>Officer of Model United Nations (2 years)</li>
+          <li>Staff Member of Pacific United Nations </li>
+          <li>1st Place in Vancouver United Nations</li>
+        </ul>
+      </div>
+      <div class="flex-item">
+        <h4 style={smallTopMargin}>Boy Scouts of America (7 years)</h4>
+        <ul>
+          <li>Eagle Scout</li>
+          <li>National Youth Leadership Attendant and Staff Member </li>
+          <li>Senior Patrol Leader of 80+ scout troop</li>
+        </ul>
+      </div>
+      <div class="flex-item">
+        <h4 style={smallTopMargin}>School Band (8 years)</h4>
+        <ul>
+          <li>All-State Band Competitor</li>
+        </ul>
+      </div>
+    </div>
+  </div>
+  <p></p>
+  <ReactTooltip client:idle />
+</MainLayout>
+
+<style>
+  .paper {
+    border: 2px solid gray;
+    padding: 1em;
+  }
+  .paper h2 {
+    text-align: center;
+    margin-bottom: 0.2em;
+  }
+  .paper h3 {
+    margin-top: 0.5em;
+    text-align: center;
+  }
+  .subhead {
+    text-align: center;
+  }
+  .paper ul li {
+    line-height: 1.2em;
+    margin-top: 0.25em;
+  }
+  .flexy {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+  }
+  .flex-item {
+    width: 49%;
+  }
+  @media (max-width: 45em) {
+    .flex-item {
+      width: 100%;
+    }
+  }
+  .tooltip {
+    background-color: hsla(var(--color-yellow), .40);
+  }
+</style>

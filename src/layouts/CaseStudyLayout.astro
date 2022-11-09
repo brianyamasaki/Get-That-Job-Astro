@@ -1,0 +1,15 @@
+---
+import MainLayout from './MainLayout.astro'
+const { frontmatter, headings } = Astro.props;
+
+---
+
+<MainLayout frontmatter={frontmatter} headings={headings}>
+  <slot />
+</MainLayout>
+
+<style>
+  :global(img) {
+    border: 1px solid black;
+  }
+</style>

@@ -12,6 +12,7 @@ div.backButton {
   border:1px solid var(--theme-text-lighter)
 }
 
-.backButton button:hover {
+.backButton button:hover,
+.backButton button:focus {
   background-color: var(--theme-bg-hover);
 }

@@ -64,7 +64,12 @@ export const SIDEBAR: Sidebar = {
 			{ text: 'Be Skimmable', link: 'en/resume/easy-to-read'},
 			{ text: 'Descriptions', link: 'en/resume/describe-your-experiences'},
 			{ text: 'Find Job Requirements', link: 'en/resume/job-requirements'},
-			{ text: 'Meet Job Requirements', link: 'en/resume/meet-job-requirements'}
+			{ text: 'Meet Job Requirements', link: 'en/resume/meet-job-requirements'},
+			{ text: 'Job Hunting Takes Time', link: 'en/resume/it-takes-time'},
+			{ text: 'Case Study A', link: 'en/resume/case-study-A'},
+			{ text: 'Case Study A, part 2', link: 'en/resume/case-study-A-pt2'},
+			{ text: 'Case Study A, part 3', link: 'en/resume/case-study-A-pt3'},
+			{ text: 'Case Study A, recommendations', link: 'en/resume/case-study-A-recommendation'}
 		],
 		'Cover Letters': [
 			{ text: 'Your Cover Letter', link: 'en/cover-letter'},

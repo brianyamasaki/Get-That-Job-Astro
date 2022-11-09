@@ -23,7 +23,8 @@
   cursor:pointer;
 }
 
-.nav-group-title:hover {
+.nav-group-title:hover,
+.nav-group-title:focus {
   background-color: var(--theme-bg-accent);
 }
 
