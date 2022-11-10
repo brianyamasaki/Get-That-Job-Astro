@@ -46,14 +46,14 @@ const smallTopMargin = {marginTop: '1em', marginBottom: '.5em'}
       &nbsp;&#9679;&nbsp;
       <span class="tooltip" data-tip='Open a free LinkedIn account and keep your Complete Resume up there'>LinkedIn: in/aeonlynx/</span>
     </div>
-    <h3 style={smallTopMargin}><span class="tooltip" data-tip="Centered section headers allow for ultra fast skimming to find correct section">Education</span></h3>
+    <h3 id="education" style={smallTopMargin}><span class="tooltip" data-tip="Centered section headers allow for ultra fast skimming to find correct section">Education</span></h3>
     <h4 style={smallTopMargin}>Transylvania State University, <small>City, State</small></h4>
     <ul>
       <li>Expected graduation in Spring 2023</li>
       <li>Extensive experience with CAD and Design software</li>
       <li>CSWA Mechanical Design Certified</li>
     </ul>
-    <h3 style={smallTopMargin}>Experience</h3>
+    <h3 id="experience" style={smallTopMargin}>Experience</h3>
     <h4 style={smallTopMargin}>Hurricane Painting, <small>On-site manager and commercial painter</small></h4>
     <ul>
       <li>Worked with clients on job sites on a daily basis, regarding complaints, billing and sales</li>
@@ -65,7 +65,7 @@ const smallTopMargin = {marginTop: '1em', marginBottom: '.5em'}
       <li>Experienced with CNC machining with manual editing of G-Code programs</li>
       <li>Worked at multiple roles in shop manufacturing processing</li>
     </ul>
-    <h3 style={smallTopMargin}><span class="tooltip" data-tip='Use multiple columns if you have problems fitting into a single page. If you are using a phone to view this, this section will display in a single column'>Achievements</span></h3>
+    <h3 id="achievements" style={smallTopMargin}><span class="tooltip" data-tip='Use multiple columns if you have problems fitting into a single page. If you are using a phone to view this, this section will display in a single column'>Achievements</span></h3>
     <div class="flexy">
       <div class="flex-item">
         <h4 style={smallTopMargin}>Home Renovation</h4>
@@ -136,5 +136,6 @@ const smallTopMargin = {marginTop: '1em', marginBottom: '.5em'}
   }
   .tooltip {
     background-color: hsla(var(--color-yellow), .40);
+    cursor: pointer;
   }
 </style>

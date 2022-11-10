@@ -69,7 +69,11 @@ export const SIDEBAR: Sidebar = {
 			{ text: 'Case Study A', link: 'en/resume/case-study-A'},
 			{ text: 'Case Study A, part 2', link: 'en/resume/case-study-A-pt2'},
 			{ text: 'Case Study A, part 3', link: 'en/resume/case-study-A-pt3'},
-			{ text: 'Case Study A, recommendations', link: 'en/resume/case-study-A-recommendation'}
+			{ text: 'Case Study A, recommendations', link: 'en/resume/case-study-A-recommendation'},
+			{ text: 'Case Study B', link: 'en/resume/case-study-B-pt1'},
+			{ text: 'Case Study B, part 2', link: 'en/resume/case-study-B-pt2'},
+			{ text: 'Case Study B, part 3', link: 'en/resume/case-study-B-pt3'},
+			{ text: 'Case Study B, recommendations', link: 'en/resume/case-study-B-recommendation'}
 		],
 		'Cover Letters': [
 			{ text: 'Your Cover Letter', link: 'en/cover-letter'},

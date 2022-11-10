@@ -1,0 +1,173 @@
+---
+import React from 'react';
+import ReactTooltip from 'react-tooltip';
+import MainLayout from '../../../layouts/MainLayout.astro';
+const frontmatter = {
+	title: 'Case Study B, recommendation',
+	description: 'An edited resume according to our techniques',
+	layout: '',
+  section: 'Resumes'
+};
+const disc = "<span>&nbsp;&#9679;&nbsp;</span>";
+
+const headings = [
+  {
+    depth: 3,
+    slug:'education',
+    text: 'Education'
+  },
+  {
+    depth: 3,
+    slug:'experience',
+    text: 'Experience'
+  },
+  {
+    depth: 3,
+    slug:'personal-projects',
+    text: 'Personal Projects'
+  },
+  {
+    depth: 3,
+    slug:'honors',
+    text: 'Honors'
+  },
+]
+const h3Style = {
+  marginTop: '0.5em', 
+  marginBottom: 0
+}
+
+const h4Style = {
+  marginTop: '0.3em',
+  marginBottom: 0
+}
+
+const h5Style = {
+  margin: 0
+}
+---
+
+<MainLayout frontmatter={frontmatter} headings={headings}>
+  <p>
+  Instead of showing a picture of a piece of paper, this is rendered in HTML, meaning 
+  that the text can wrap at odd places, depending on how wide your browser is opened. 
+  </p>
+  <p>
+    Mouse over or tap on the highlighted text to see extra detail on formatting choices on this resume.
+  </p>
+  <div class="paper">
+    <h2>Adele Fortuna</h2>
+    <div class="subhead">
+      adelefort@university.edu
+      &nbsp;|&nbsp;
+      (425)555-1212
+      &nbsp;|&nbsp;
+      <span class="tooltip" data-tip='Ensure printed copies can still lead to the correct LinkedIn account'>
+        <a href="#"><strong>LinkedIn: in/adelefort</strong></a>
+      </span>
+    </div>
+    <h3 id="education" style={h3Style}>Education</h3>
+    <hr />
+    <h4 style={h4Style}>Prestigious University, <small>Pandora, WA</small></h4>
+    <ul>
+      <li>Expected graduation in Spring 2022 with BS in Physics and Mathematics</li>
+      <li>GPA: 3.65 / 4.00 &mdash; Deans list for 12 quarters</li>
+    </ul>
+    <h3 id="experience" style={h3Style}>Experience</h3>
+    <hr />
+    <h4 style={h4Style}>HOVER, <small>Product Management Intern, June 2021 - Present</small></h4>
+    <ul>
+      <li>Research, design and spearhead the user onboarding workflow. Increased retention by 30% and profit by $10M.</li>
+      <li>Work and lead a variety of technical teams to win the company-wide 48 hour Hackathon, producing a shippable product.</li>
+    </ul>
+    <h4 style={h4Style}>SpaceX <small>Electromechanical Technician, June 2020 - September 2020</small></h4>
+    <ul>
+      <li>Built and implemented an automated inventory workflow program resulting in $10,000 material savings and reduction of inventory downtime by 15%</li>
+      <li>Research and recommendation on materials used to reduce thermal energy.</li>
+    </ul>
+    <h4 style={h4Style}>Electronics Engineer, <small>Prestigious University Formula Motorsports</small></h4>
+    <p>
+      Formula SAE competition racing to design, build and test performance of an electric race car used to compete 
+      with other students around the globe. Eleventh place FSAE Electric Race Team Worldwide in 2020.
+    </p>
+    <h5 style={h5Style}><span class="underline">Team32</span>: Electronics Engineer | Cost Lead</h5>
+    <ul>
+      <li><span class="tooltip" data-tip="Emphasize organizational skills as first item">Managed Record keeping of costs and expenses for the team.</span></li>
+      <li>Circuit design and PCB layout for Brake System. Improved design detects simultaneous hard braking and throttle
+        and optimized layout for 15% size reduction.
+      </li>
+      <li>Designed, built and tested new features for steering wheel and dashboard controls <span class="tooltip" data-tip="Acronym is for interviewer to ask for details">(TSAL)</span></li>
+    </ul>
+    <h5 style={h5Style}><span class="underline">Team31</span>: Composites Engineer | Business Consultang</h5>
+    <ul>
+      <li><span class="tooltip" data-tip="Emphasize organizational and communication skills as first item">Managed Team 31 business financials, marketing plans and competition research case studies - delivered investment pitch
+        and formal presentation at Formula SAE competition.</span>
+      </li>
+      <li>Designed, built and tested carbon fiber parts for race car suspension parts, reducing weight by 40%</li>
+    </ul>
+    <h3 id="personal-projects" style={h3Style}>Personal Projects</h3>
+    <hr />
+    <h4 style={h4Style}>Chess Analysis in Python <small>January 2021 - Present</small></h4>
+    <ul>
+      <li>Procures, replicates and analyzes 20,000 online chess games to discover the best opening move and true piece type values.</li>
+      <li>Utilizes machine learning and position analysis through a chess engine and teaches the player as they play.</li>
+    </ul>
+    <h3 id="honors" style={h3Style}>Honors</h3>
+    <hr />
+    <h4 style={h4Style}>Eagle Scout | Boy Scouts of America</h4>
+    <ul>
+      <li>Senior Patrol Leader and many other leadership roles</li>
+      <li>Instructor at National Youth Leadership Training seminars</li>
+    </ul>
+  </div>
+  <p>
+    Again, this resume is filled with technical and engineering experiences that are impressive, but aren't 
+    necessarily the goal of the job description.
+    We are trying to show leadership and communication skills as often as possible since the project 
+    manager role is all about leadership, communication and negotiation (it's a job often compared to herding cats)
+    Many technical details were omitted to fit everything onto a single page of paper. 
+  </p>
+  <ReactTooltip client:idle />
+</MainLayout>
+
+<style>
+  .paper {
+    border: 2px solid gray;
+    padding: 1em;
+    font-size: 0.8em;
+  }
+  .paper h2 {
+    text-align: center;
+    margin-bottom: 0.2em;
+  }
+  .paper h3 {
+    color:blue;
+  }
+  .subhead {
+    text-align: center;
+  }
+  .paper ul li {
+    line-height: 1.2em;
+    margin-top: 0.25em;
+  }
+  .flexy {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+  }
+  .flex-item {
+    width: 49%;
+  }
+  @media (max-width: 45em) {
+    .flex-item {
+      width: 100%;
+    }
+  }
+  .tooltip {
+    background-color: hsla(var(--color-yellow), .40);
+    cursor: pointer;
+  }
+  .underline {
+    text-decoration: underline;
+  }
+</style>
