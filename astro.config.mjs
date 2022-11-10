@@ -9,5 +9,5 @@ export default defineConfig({
   integrations: [// Enable Preact to support Preact JSX components.
   preact(), // Enable React for the Algolia search component.
   react(), mdx()],
-  site: `http://astro.build`
+  site: `https://get-that-job.yamasakidesign.com`
 });
