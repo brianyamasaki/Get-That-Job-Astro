@@ -65,6 +65,8 @@ export const SIDEBAR: Sidebar = {
 			{ text: 'Find Job Requirements', link: 'en/resume/job-requirements'},
 			{ text: 'Meet Job Requirements', link: 'en/resume/meet-job-requirements'},
 			{ text: 'Job Hunting Takes Time', link: 'en/resume/it-takes-time'},
+		],
+		'Case Studies (Resumes)': [
 			{ text: 'Case Study A', link: 'en/resume/case-study-A'},
 			{ text: 'Case Study A, part 2', link: 'en/resume/case-study-A-pt2'},
 			{ text: 'Case Study A, part 3', link: 'en/resume/case-study-A-pt3'},
@@ -75,7 +77,10 @@ export const SIDEBAR: Sidebar = {
 			{ text: 'Case Study B, recommendations', link: 'en/resume/case-study-B-recommendation'},
 			{ text: 'Case Study C', link: 'en/resume/case-study-C-pt1'},
 			{ text: 'Case Study C, part 2', link: 'en/resume/case-study-C-pt2'},
-			{ text: 'Case Study C, recommendations', link: 'en/resume/case-study-C-recommendation'}
+			{ text: 'Case Study C, recommendations', link: 'en/resume/case-study-C-recommendation'},
+			{ text: 'Case Study D', link: 'en/resume/case-study-D-pt1'},
+			{ text: 'Case Study D, part 2', link: 'en/resume/case-study-D-pt2'},
+			{ text: 'Case Study D, recommendations', link: 'en/resume/case-study-D-recommendation'}
 		],
 		'Cover Letters': [
 			{ text: 'Your Cover Letter', link: 'en/cover-letter'},
