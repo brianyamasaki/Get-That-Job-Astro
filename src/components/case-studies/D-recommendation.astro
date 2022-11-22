@@ -1,5 +1,5 @@
 ---
-
+import ReactTooltip from "react-tooltip";
 ---
 
 <div class="page">
@@ -17,22 +17,13 @@
       <ul>
         <li>BSA Adult Leader</li>
         <li>Emergency Medical Technician certified</li>
-        <li>Trained and Counseled young men into soldiers</li>
+        <li><span class="tooltip" data-tip="This repeats what's listed on the right column because this is really important">Trained and Counseled young men into soldiers</span></li>
         <li>US Army Trained First Aid</li>
-        <li>Fire Arms Trained (many and various)</li>
+        <li>Fire Arms Trained (<span class="tooltip" data-tip="Way too many fire arms to list">many and various</span>)</li>
       </ul>
     </div>
     <div class="right-column">
-      <h3>Education</h3>
-      <h4>Long Beach Technical College</h4>
-      <ul>
-        <li>Certified Welder</li>
-      </ul>
-      <h4>Long Beach High School</h4>
-      <ul>
-        <li>Graduate with 70 college credits</li>
-      </ul>
-      <h3>Work Experience</h3>
+      <h3><span class="tooltip" data-tip="Move Work Experience to the top since it's more relevant than education">Work Experience</span></h3>
       <h4>United States Army Infantry Service</h4>
       <ul>
         <li>Trained and counseled young soldiers to become an effective and disciplined unit</li>
@@ -45,13 +36,23 @@
       <ul>
         <li>Customer service as well as stocking goods in the Produce Department</li>
       </ul>
-      <h4>Castle Rock BSA</h4>
+      <h4>Boy Scouts of America Troop 66 - Castle Rock</h4>
       <ul>
         <li>Taught scouting skills while keeping scouts safe - Camp Counselor and Lifeguard (Camp Collins)</li>
         <li>Worked with younger scouts - Camp Counselor and Lifeguard (Camp Battleground)</li>
       </ul>
+      <h3>Education</h3>
+      <h4>Long Beach Technical College</h4>
+      <ul>
+        <li>Certified Welder</li>
+      </ul>
+      <h4>Long Beach High School</h4>
+      <ul>
+        <li>Graduate with 70 college credits</li>
+      </ul>
     </div>
   </div>
+  <ReactTooltip client:idle />
 </div>
 
 <style>
@@ -117,6 +118,10 @@
   .right-column {
     flex: 9;
     margin-left: 1.5em;
+  }
+  .tooltip {
+    background-color: hsla(var(--color-yellow), .40);
+    cursor: pointer;
   }
   @media (max-width: 35em) { 
     .page {
