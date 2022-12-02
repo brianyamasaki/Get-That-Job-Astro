@@ -1,6 +1,7 @@
 .next-page-link {
   display: flex;
   justify-content: right;
+  margin: 1em 0;
 }
 
 .next-page-link a {
