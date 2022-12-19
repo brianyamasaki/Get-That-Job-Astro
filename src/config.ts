@@ -96,7 +96,12 @@ export const SIDEBAR: Sidebar = {
 			{ text: 'Speed Dating', link: 'en/interviews/speed-dating'},
 		],
 		'First Day': [
-			{ text: 'What to Bring', link: 'en/first-day'}
+			{ text: 'What to Bring', link: 'en/first-day'},
+			{ text: 'Income Taxes', link: 'en/first-day/taxes'},
+			{ text: 'Sign Your Life Away', link: 'en/first-day/contracts1'},
+			{ text: 'Retirement Plans', link: 'en/first-day/retirement-plans'},
+			{ text: 'Company Stock', link: 'en/first-day/company-stock'},
+			{ text: 'Health Insurance', link: 'en/first-day/health-insurance'},
 		],
 		'Common Ideas': [
 			{ text: 'Being Uncomfortable', link: 'en/common-ideas/being-uncomfortable'},
