@@ -1,0 +1,83 @@
+---
+import ReactTooltip from "react-tooltip";
+
+---
+
+<div class="page">
+  <h2>Kylee<span>Schneider</span></h2>
+  <div class="flexysubhead">
+    <div>
+      Phone: <strong>425-555-1212</strong>
+    </div>
+    <div class="tooltip" data-tip="Created a more professional, yet free email address">
+      Email: <strong>kyleeSchneider425@msn.com</strong>
+    </div>
+    <div class="tooltip" data-tip="Created a LinkedIn account and will fill in job experiences going forward">
+      LinkedIn: <strong>in/kylee425</strong>
+    </div>
+  </div>
+  <h3 
+    class="tooltip" 
+    data-tip="Since Kylee has no non-educational experiences with Biochemistry, we roll all her biochemistry experiences into the educational section"
+  >
+    Education and Biochemistry Experience
+  </h3>
+  <ul class="tight-list">
+    <li><strong>Bachelor of Science in Biochemistry</strong> from <em>Prestitious University</em> - Dean's List (4 quarters)</li>
+    <li>Isolated a novel phage now catalogued in the Phage Database  <a href="https://www.ncbi.nlm.nih.gov/nuccore/OP068344" >https://www.ncbi.nlm.nih.gov/nuccore/OP068344</a></li>
+    <li>Skill with laboratory techniques such as pipetting, standard creation, purification, centrifugation, titration, calibration of various lab equipment, organic synthesis, and lab notebook keeping</li>
+    <li>Experience with H-NMR, IR, mass spectrometry, UV-VIS spectrometry, chromatography, fluorescence spectrometry, oxygen bomb calorimetry, etc</li>
+    <li>Undergraduate thesis - Exploring the properties of a then unresearched organo-photocatalyst under the guidance of a professor. Maintained rigorous methodology, records and analyzed data using latest computer software and tools.</li>
+  </ul>  
+  <h3 class="tooltip" data-tip="Highlight Kylee's responsibility, leadership and teaching experience">
+    Leadership and Mentorship Experience
+  </h3>
+  <ul class="tight-list">
+    <li><strong>Staff of Summer Camp Hahobas</strong> - Boys and Girls Clubs of Random County &mdash; Taught 4 - 12 year old children in science and outdoor related activities while maintaining order and keeping it fun.</li>
+    <li><strong>Summer Camp Educator</strong> - Rasmussen Learning Center &mdash; Led thirty or more 4 - 10 year old children on daily field trips. Drove 13 passenger vans long distances to daily activities.</li>
+    <li><strong>Choir Councilperson</strong> - Prestitious University Concert Choir &mdash; Planned and led events for a 50 member choir.</li>
+    <li><strong>Student Body President</strong> - Emily Dickinson High School &mdash; Head of student government, planning multiple events, fundraisers and the Prom.</li>
+  </ul>
+  <ReactTooltip client:idle />
+</div>
+
+<style>
+  .page {
+    border: 2px solid black;
+    padding: 2rem 2rem 3rem 2rem;
+  }
+  .page h2 {
+    text-align: left;
+    font-family: 'Calibri', 'Tahoma', Arial, Helvetica, sans-serif;
+    margin-bottom: .1rem;
+    text-transform: uppercase;
+    font-kerning: normal;
+    border-bottom: 1px solid black;
+  }
+  .page h2 span {
+    color: rgb(90,90,90)
+  }
+  .page h3 {
+    font-family: 'Calibri', 'Tahoma', Arial, Helvetica, sans-serif;
+    margin: 2rem 0 0 0;
+    font-size: 1.4rem;
+    text-transform: uppercase;
+    border-bottom: 1px solid black;
+  }
+  .flexysubhead {
+    display: flex;
+    font-size: 0.7rem;
+    justify-content: space-between;
+  }
+  .tooltip {
+    background-color: hsla(var(--color-yellow), .40);
+    cursor: pointer;
+  }
+  ul.tight-list {
+    margin: 0 1rem 0 1rem;
+  }
+  ul.tight-list li {
+    margin: 3px;
+  }
+
+</style>
