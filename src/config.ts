@@ -113,7 +113,8 @@ export const SIDEBAR: Sidebar = {
 			{ text: 'Networking', link: 'en/common-ideas/networking'},
 			{ text: 'Portolios', link: 'en/common-ideas/portfolios'},
 			{ text: 'Recruiters are Busy', link: 'en/common-ideas/recruiters-are-busy'},
-			{ text: 'Speed Dating', link: 'en/common-ideas/speed-dating'}
+			{ text: 'Speed Dating', link: 'en/common-ideas/speed-dating'},
+			{ text: 'Interviewing Tips', link: 'en/common-ideas/interviewing-book-recommendation'}
 		],
 		'About':[{text: 'About this website', link: 'en/about'}]
 	},
